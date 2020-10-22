@@ -1,0 +1,148 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "validate pet Store transactions",
+        "description": "",
+        "id": "validate-pet-store;validate-pet-store-transactions",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 790199100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user domain \"https://petstore.swagger.io/v2/pet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://petstore.swagger.io/v2/pet",
+                  "offset": 13
+                }
+              ],
+              "location": "DemoPetStore.user_domain(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 66400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user add endPoint \"/findByStatus\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/findByStatus",
+                  "offset": 19
+                }
+              ],
+              "location": "DemoPetStore.user_add_endPoint(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 46204300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user get data with param \"status\" value \"available,sold\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 26
+                },
+                {
+                  "val": "available,sold",
+                  "offset": 41
+                }
+              ],
+              "location": "DemoPetStore.user_get_data_with_param_value(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3901655800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user get response",
+            "match": {
+              "location": "DemoPetStore.user_get_response()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2764979100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user verify all results containing \"available,sold\" and not containing \"pending\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "available,sold",
+                  "offset": 36
+                },
+                {
+                  "val": "pending",
+                  "offset": 72
+                }
+              ],
+              "location": "DemoPetStore.user_verify_all_results_containing_and_not_containing(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 2,
+            "name": "@test"
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "Add new available pet to store",
+        "description": "",
+        "id": "validate-pet-store;add-new-available-pet-to-store",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3069600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user domain \"https://petstore.swagger.io/v2/pet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://petstore.swagger.io/v2/pet",
+                  "offset": 13
+                }
+              ],
+              "location": "DemoPetStore.user_domain(String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "validate Pet Store",
+    "description": "",
+    "id": "validate-pet-store",
+    "keyword": "Feature",
+    "uri": "demoPetStore.feature"
+  }
+]
