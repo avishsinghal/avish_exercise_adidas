@@ -15,3 +15,8 @@ Note: Please do check you are using Correct version of browser driver and driver
 Driver path: /avish_exercise_adidas/tools/..
 
 to execute please run application with juit test.
+
+
+Thanks,
+Avish Singhal
+avishsinghal24@gmail.com
