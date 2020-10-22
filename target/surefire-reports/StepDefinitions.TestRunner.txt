@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: StepDefinitions.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 40, Failures: 2, Errors: 0, Skipped: 13, Time elapsed: 132.903 sec <<< FAILURE!
+When user click product "Dell i7 8gb"(Scenario: Validate purchase amount is equal to placed order amount)  Time elapsed: 0.003 sec  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.DemoOnlineStore.user_click_product(DemoOnlineStore.java:35)
+	at ?.When user click product "Dell i7 8gb"(demoOnlineShop.feature:17)
+
+Scenario: Validate purchase amount is equal to placed order amount  Time elapsed: 0.007 sec  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.DemoOnlineStore.user_click_product(DemoOnlineStore.java:35)
+	at ?.When user click product "Dell i7 8gb"(demoOnlineShop.feature:17)
+

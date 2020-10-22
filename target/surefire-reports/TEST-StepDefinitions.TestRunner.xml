@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="40" failures="2" name="StepDefinitions.TestRunner" time="0.256" errors="0" skipped="13">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_261\bin"/>
+    <property name="java.vm.version" value="25.261-b12"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\avisingh6\Documents\AvishData\Workspace\LocalWorkspace\avish_exercise_adidas"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\avisingh6\Documents\AvishData\Workspace\LocalWorkspace\avish_exercise_adidas"/>
+    <property name="java.runtime.version" value="1.8.0_261-b12"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.8.0_261\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\AVISIN~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Users\avisingh6\Documents\AvishData\Workspace\LocalWorkspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2210811410773236667.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_261\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_261/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_261/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_261/bin/../jre/lib/amd64;C:\Program Files\Java\jdk1.8.0_261\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Box\Box Edit\;C:\Users\avisingh6\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_261\bin;;C:\Users\avisingh6\Downloads\eclipse-jee-neon-3-win32-x86_64\eclipse;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\avisingh6"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="avisingh6"/>
+    <property name="java.class.path" value="/C:/Users/avisingh6/Downloads/eclipse-jee-neon-3-win32-x86_64/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.7.0.20160603-1931/jars/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jre1.8.0_261"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_261"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jre1.8.0_261\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_261\lib\resources.jar;C:\Program Files\Java\jre1.8.0_261\lib\rt.jar;C:\Program Files\Java\jre1.8.0_261\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_261\lib\jce.jar;C:\Program Files\Java\jre1.8.0_261\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_261\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_261\lib\tools.jar"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\avisingh6\Documents\AvishData\Workspace\LocalWorkspace\avish_exercise_adidas\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Given user Launch url &quot;https://www.demoblaze.com/index.html&quot;" time="0.008"/>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="When user navigate to &quot;Phones&quot;" time="0"/>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Then user validates expected products &quot;Samsung galaxy s6,Nokia lumia 1520&quot; are visible" time="0"/>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="When user navigate to &quot;Laptops&quot;" time="0"/>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Then user validates expected products &quot;Sony vaio i5,Sony vaio i7&quot; are visible" time="0"/>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="When user navigate to &quot;Monitors&quot;" time="0"/>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Then user validates expected products &quot;Apple monitor 24&quot; are visible" time="0"/>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="When user navigate to &quot;Laptops&quot;" time="0"/>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="When user click product &quot;Sony vaio i5&quot;" time="0"/>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Then user add product to cart" time="0"/>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="When user accept pop up confirmation" time="0"/>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Then user move to &quot;Home&quot;" time="0"/>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="When user navigate to &quot;Laptops&quot;" time="0"/>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="When user click product &quot;Dell i7 8gb&quot;" time="0.003">
+    <failure type="java.lang.AssertionError">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.DemoOnlineStore.user_click_product(DemoOnlineStore.java:35)
+	at ✽.When user click product &quot;Dell i7 8gb&quot;(demoOnlineShop.feature:17)
+</failure>
+  </testcase>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Scenario: Validate purchase amount is equal to placed order amount" time="0.007">
+    <failure type="java.lang.AssertionError">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.DemoOnlineStore.user_click_product(DemoOnlineStore.java:35)
+	at ✽.When user click product &quot;Dell i7 8gb&quot;(demoOnlineShop.feature:17)
+</failure>
+  </testcase>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Then user add product to cart" time="0.009">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="When user accept pop up confirmation" time="0.014">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Then user move to &quot;Cart&quot;" time="0.015">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Then user verifies product are there &quot;Sony vaio i5,Dell i7 8gb&quot;" time="0.015">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="When user delete product &quot;Dell i7 8gb&quot;" time="0.015">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Then user verify product is deleted &quot;Dell i7 8gb&quot;" time="0.015">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="When user click on Place order" time="0.019">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Then user fill form fields" time="0.021">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Then user capture total amount from the pop-up" time="0.021">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="When user click on purchase" time="0.022">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Then user capture purchase ID and Amount" time="0.022">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Then user verify amount should match to urchase amount" time="0.022">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Validate purchase amount is equal to placed order amount" name="Then close browser" time="0.026">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: validate pet Store transactions" name="Given user domain &quot;https://petstore.swagger.io/v2/pet&quot;" time="0"/>
+  <testcase classname="Scenario: validate pet Store transactions" name="And user add endPoint &quot;/findByStatus&quot;" time="0"/>
+  <testcase classname="Scenario: validate pet Store transactions" name="When user get data with param &quot;status&quot; value &quot;available,sold&quot;" time="0"/>
+  <testcase classname="Scenario: validate pet Store transactions" name="Then user get response" time="0"/>
+  <testcase classname="Scenario: validate pet Store transactions" name="Then user verify all results containing &quot;available,sold&quot; and not containing &quot;pending&quot;" time="0"/>
+  <testcase classname="Scenario: validate pet Store transactions" name="Scenario: validate pet Store transactions" time="0"/>
+  <testcase classname="Scenario: Add new available pet and then update to sold to store" name="Given user domain &quot;https://petstore.swagger.io/v2/pet&quot;" time="0"/>
+  <testcase classname="Scenario: Add new available pet and then update to sold to store" name="When user hit request and validate response" time="0"/>
+  <testcase classname="Scenario: Add new available pet and then update to sold to store" name="Then user update pet to sold" time="0.002"/>
+  <testcase classname="Scenario: Add new available pet and then update to sold to store" name="Then user verify all results containing &quot;sold&quot; and not containing &quot;available,pending&quot;" time="0"/>
+  <testcase classname="Scenario: Add new available pet and then update to sold to store" name="Then user delete pet id &quot;111&quot; from inventory" time="0"/>
+  <testcase classname="Scenario: Add new available pet and then update to sold to store" name="Scenario: Add new available pet and then update to sold to store" time="0"/>
+</testsuite>

@@ -17,7 +17,8 @@ public class DemoOnlineStore {
 	}
 
 	@When("^user navigate to \"([^\"]*)\"$")
-	public void user_navigate_to(String data)  {
+	public void user_navigate_to(String data) throws InterruptedException  {
+		Thread.sleep(3000);
 		Assert.assertTrue(webAction.click("xpath", ".//*[text()='"+data+"']"));
 	}
 
@@ -31,8 +32,9 @@ public class DemoOnlineStore {
 	}
 
 	@When("^user click product \"([^\"]*)\"$")
-	public void user_click_product(String data)  {
+	public void user_click_product(String data) throws InterruptedException  {
 		Assert.assertTrue(webAction.click("xpath",".//*[@class='card-title']/a[text()='"+data+"']"));
+		Thread.sleep(3000);
 	}
 
 	@Then("^user add product to cart$")

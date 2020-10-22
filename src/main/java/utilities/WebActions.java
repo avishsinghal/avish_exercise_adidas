@@ -27,7 +27,7 @@ public class WebActions {
 		ChromeOptions options = new ChromeOptions();
 		WebDriver driver=new ChromeDriver(options);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get(url);	
 		return driver;
 
