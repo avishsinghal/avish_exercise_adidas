@@ -1,27 +1,13 @@
 package StepDefinitions;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import org.apache.http.HttpStatus;
-import org.json.JSONObject;
-import org.json.XML;
 import org.junit.Assert;
-
-import com.mongodb.util.JSON;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import groovyjarjarantlr.collections.List;
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import model.MyArray;
-import utilities.XmlReader;
-
-import com.google.gson.Gson;
 
 public class DemoPetStore {
 
@@ -29,7 +15,6 @@ public class DemoPetStore {
 	private String endPoint;
 	private RequestSpecification request=  RestAssured.given();
 	private Response response;
-	private XmlReader xmlObj;
 	
 	@Given("^user domain \"([^\"]*)\"$")
 	public void user_domain(String arg1) throws Throwable {
@@ -50,26 +35,48 @@ public class DemoPetStore {
 	public void user_get_response() throws Throwable {
 		response=request.when().get(domainURL+endPoint);
 	}
-	
+
 	@Then("^user verify all results containing \"([^\"]*)\" and not containing \"([^\"]*)\"$")
 	public void user_verify_all_results_containing_and_not_containing(String contain, String notContain) throws Throwable {
 		String responseData=response.getBody().asString();   
-        for(String data:contain.split(",")){
-        	Assert.assertTrue(responseData.contains("\"status\":\""+data+"\""));
-        }
-        for(String dataNot:notContain.split(",")){        	
-        	Assert.assertTrue(!responseData.contains(dataNot));
-        } 
-        hitjson();
+		for(String data:contain.split(",")){
+			Assert.assertTrue(responseData.contains("\"status\":\""+data+"\""));
+		}
+		for(String dataNot:notContain.split(",")){        	
+			Assert.assertTrue(!responseData.contains(dataNot));
+		} 
 	}
 
-	public void hitjson(){
-		 request.header("Content-Type", "application/json");
-		 request.body("{  \"id\": 111,  \"category\": {    \"id\": 0,    \"name\": \"string\"  },  \"name\": \"doggie\",  \"photoUrls\": [    \"string\"  ],  \"tags\": [    {      \"id\": 0,      \"name\": \"hhjjhj\"    }  ],  \"status\": \"available\"}");
-		 response = request.post(domainURL);
-		  String responseData=response.getBody().asString(); 
-		  System.out.println(response.getStatusCode());
-		  System.out.println(responseData);
+	@When("^user hit request and validate response$")
+	public void user_hit_request_and_validate_response() throws Throwable {
+		request.header("Content-Type", "application/json");
+		request.body("{  \"id\": 111,  \"category\": {    \"id\": 0,    \"name\": \"string\"  },  \"name\": \"doggie\",  \"photoUrls\": [    \"string\"  ],  \"tags\": [    {      \"id\": 0,      \"name\": \"hhjjhj\"    }  ],  \"status\": \"available\"}");
+		response = request.post(domainURL);
+		String responseData=response.getBody().asString(); 
+		System.out.println(response.getStatusCode());
+		System.out.println(responseData);
+		Assert.assertTrue(response.getStatusCode()==200);
 	}
 	
+	@Then("^user update pet to sold$")
+	public void user_update_pet_to_sold() throws Throwable {
+		request.header("Content-Type", "application/json");
+		request.body("{  \"id\": 111,  \"category\": {    \"id\": 0,    \"name\": \"string\"  },  \"name\": \"doggie\",  \"photoUrls\": [    \"string\"  ],  \"tags\": [    {      \"id\": 0,      \"name\": \"hhjjhj\"    }  ],  \"status\": \"sold\"}");
+		response = request.put(domainURL);
+		String responseData=response.getBody().asString(); 
+		System.out.println(response.getStatusCode());
+		System.out.println(responseData);
+		Assert.assertTrue(response.getStatusCode()==200);
+	}
+	@Then("^user delete pet id \"([^\"]*)\" from inventory$")
+	public void user_delete_pet_id_from_inventory(String arg1) throws Throwable {
+		request.header("Content-Type", "application/json");
+		String url=domainURL+"/"+arg1;
+		response = request.delete(url);
+		String responseData=response.getBody().asString(); 
+		System.out.println(response.getStatusCode());
+		System.out.println(responseData);
+		Assert.assertTrue(response.getStatusCode()==200);
+	}
+
 }
